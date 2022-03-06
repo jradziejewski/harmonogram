@@ -1,9 +1,10 @@
 #pragma once
 class Time {
-public:
+private:
 	int seconds = 0, hours = 0, minutes = 0;
+public:
 	void printActualTime();
-	void getSeconds(int number);
-	void getMinutes(int number);
-	void getHours(int number);
+	void setSeconds(int number);
+	void setMinutes(int number);
+	void setHours(int number);
 };

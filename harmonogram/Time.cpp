@@ -1,24 +1,39 @@
 #include <iostream>
 #include "Time.h"
 
-void Time::getSeconds(int number) {
-
+void Time::setSeconds(int number) {
+	if (number < 0 || number > 59) { 
+		std::cout << "Bledny format. Sprobuj ponownie\n"; 
+		return;
+	}
+	else seconds = number;
 }
 
-void Time::getMinutes(int number) {
-
+void Time::setMinutes(int number) {
+	if (number < 0 || number > 59) {
+		std::cout << "Bledny format. Sproboj ponownie\n";
+		return;
+	}
+	else minutes = number;
 }
 
-void Time::getHours(int number) {
-
+void Time::setHours(int number) {
+	if (number < 0 || number > 23) {
+		std::cout << "Bledny format. Sproboj ponownie\n";
+		return;
+	}
+	else hours = number;
 }
 
 void Time::printActualTime() {
-	std::cout << hours << ":";
+	system("CLS");
+	std::cout << std::endl << hours << ":";
 	if (minutes > 9) std::cout << minutes;
 	else std::cout << "0" << minutes;
 	std::cout << ":";
 	if (seconds > 9) std::cout << seconds;
 	else std::cout << "0" << seconds;
+
+	std::cout << "\n\n";
 
 }

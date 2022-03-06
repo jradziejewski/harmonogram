@@ -4,24 +4,43 @@
 
 int main() {
 	Time clock;
-	int menu = true;
+	bool menu = true;
+	bool submenu = true;
+	char suboption;
+	int number;
 
 	while (menu) {
 		char option;
-		std::cout << "1. Ustaw sekundy \n2. Ustaw minuty \n3. Ustaw godziny\n4. Opusc program\n";
+		std::cout << "1. Ustaw sekundy \n2. Ustaw minuty \n3. Ustaw godziny\n4. Wyswietl...\n5. Opusc program\n";
 		std::cin >> option;
 
 		switch (option) {
 		case '1': 
-			std::cout << "\n\nPodaj liczbe sekund\n\n";
+			system("CLS");
+			std::cout << "Podaj liczbe sekund: ";
+			std::cin >> number;
+			clock.setSeconds(number);
 			break;
 		case '2':
-			std::cout << "\n\nPodaj liczbe minut\n\n";
+			system("CLS");
+			std::cout << "Podaj liczbe minut: ";
+			std::cin >> number;
+			clock.setMinutes(number);
 			break;
 		case '3':
-			std::cout << "\n\nPodaj liczbe godzin:\n\n";
+			system("CLS");
+			std::cout << "Podaj liczbe godzin: ";
+			std::cin >> number;
+			clock.setHours(number);
 			break;
 		case '4':
+			submenu = true;
+			system("CLS");
+			std::cout << "a. Wyswietl wszystko\nb. Wyswietl godziny\nc. Wyswietl minuty\nd. Wyswietl sekundy\ne. Powroc\n";
+			
+			break;
+		case '5':
+			system("CLS");
 			menu = false;
 			break;
 		default:
@@ -29,21 +48,6 @@ int main() {
 			break;
 		}
 	}
-	//do {
-	//	std::cout << "Podaj sekundy: ";
-	//	std::cin >> clock.seconds;
-	//	if (clock.seconds < 0 || clock.seconds > 59) std::cout << "Bledny format. Sprobuj ponownie\n";
-	//} while (clock.seconds < 0 || clock.seconds > 59);
-
-	//do {
-	//	std::cout << "Podaj minuty: ";
-	//	std::cin >> clock.minutes;
-	//} while (clock.minutes < 0 || clock.minutes > 59);
-
-	//do {
-	//	std::cout << "Podaj godzine: ";
-	//	std::cin >> clock.hours;
-	//} while (clock.hours < 0 || clock.hours > 23);
 
 	clock.printActualTime();
 }

@@ -25,9 +25,22 @@ void Time::setHours(int number) {
 	else hours = number;
 }
 
+int Time::getSeconds() {
+	return seconds;
+}
+
+int Time::getMinutes() {
+	return minutes;
+}
+
+int Time::getHours() {
+	return hours;
+}
+
+
 void Time::printActualTime() {
 	system("CLS");
-	std::cout << std::endl << hours << ":";
+	std::cout << std::endl << "Czas: " << hours << ":";
 	if (minutes > 9) std::cout << minutes;
 	else std::cout << "0" << minutes;
 	std::cout << ":";

@@ -36,7 +36,7 @@ int main() {
 		case '4':
 			submenu = true;
 			system("CLS");
-			std::cout << "a. Wyswietl wszystko\nb. Wyswietl godziny\nc. Wyswietl minuty\nd. Wyswietl sekundy\ne. Powroc\n";
+			clock.printActualTime();
 			
 			break;
 		case '5':

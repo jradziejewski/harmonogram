@@ -11,7 +11,7 @@ int main() {
 
 	while (menu) {
 		char option;
-		std::cout << "1. Ustaw sekundy \n2. Ustaw minuty \n3. Ustaw godziny\n4. Wyswietl...\n5. Opusc program\n";
+		std::cout << "1. Ustaw sekundy \n2. Ustaw minuty \n3. Ustaw godziny\n4. Wyswietl czas\n5. Opusc program\n";
 		std::cin >> option;
 
 		switch (option) {
